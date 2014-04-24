@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Hacking For Fun]]></title>
   <link href="http://KingWa.github.io/atom.xml" rel="self"/>
   <link href="http://KingWa.github.io/"/>
-  <updated>2014-04-24T14:08:28+08:00</updated>
+  <updated>2014-04-24T21:34:26+08:00</updated>
   <id>http://KingWa.github.io/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[KingWah]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>

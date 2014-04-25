@@ -12,6 +12,7 @@ Actually, I am not a blog heavy writer. I use blog most as a tool to write down 
 Why I choose Github and Octopress
 ----------------------------------
 A blog should provides following functions as I see:
+
 1. Full freedom to control content of all blog post, ease to access and migrate the content. [Github][gh] is an ideal place to host a blog for it provides free disk space and free version control service, and most of all it is becoming the facebook for hackers.
 [gh]:github.com
 
@@ -24,6 +25,7 @@ A blog should provides following functions as I see:
 How I built up this blog
 ------------------------
 There are many blog posts that guides how to build up a blog with Github and Octopress, links below are where I have got tips from:
+
 1. [ChuChao333][]
 2. [dblock][]
 3. [gerardcondon][]
@@ -42,7 +44,9 @@ Install Ruby
 Octopress is a blogging framework based on Jekyll and which is written in Ruby. I am very new to Ruby, so I just followed other's introduction to install Ruby by [RVM][].
 
 RVM(Ruby Version Manager), as its name says, is a software platform designed to manage multiple installations of Rury on the same device. Before installing RVM, we need to check whether following softwares are already installed.
-# bash, awk, sed, grep, ls, cp, tar, curl, gunzip, bunzip2, git, svn
+{% highlight shell %}
+bash, awk, sed, grep, ls, cp, tar, curl, gunzip, bunzip2, git, svn
+{% endhighlight %}
 
 After requirements were meet, use following command to install RVM:
 {% highlight shell %}
@@ -107,6 +111,7 @@ The octopress repository we installed previouly contains several tasks to genera
 caojinghua@debian:~/myworkstation/octopress$ rake setup_github_pages
 {% endhighlight %}
 Several things were done in this command:
+
 1. Since the remote origin points to "git://github.com/imathis/octopress.git", it set up a new remote reference name "octopress" that points to "git://github.com/imathis/octopress.git".
 2. Change the remote origin points to "git@github.com:*username*/*username*.github.io.git", so as to attach to the github repository while doing "git pull or git push" commands.
 3. Rename octopress repository's master branch to "source". So while doing "git push origin source", all updated objects in the local source branch would be pushed into the remote github repository(*username*.github.io)'s source branch. And we have successfully make the local octopress source branch mapping to the remote *username*.github.io repository's source branch. Each time we have update in this source branch, we should push it to the corresponding remote branch.
@@ -139,6 +144,7 @@ This task would commit all updated content in "_deploy" directory, and git push 
 Summary
 -------
 I think several ponts are important during this building process:
+
 1. Master git, at least understand the essence of git.
 2. Try to use ssh to connect to github repository.
 3. Patience is needed.

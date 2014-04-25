@@ -4,7 +4,7 @@
   <title><![CDATA[Hacking For Fun]]></title>
   <link href="http://KingWa.github.io/atom.xml" rel="self"/>
   <link href="http://KingWa.github.io/"/>
-  <updated>2014-04-24T21:34:26+08:00</updated>
+  <updated>2014-04-25T11:33:54+08:00</updated>
   <id>http://KingWa.github.io/</id>
   <author>
     <name><![CDATA[KingWah]]></name>
@@ -12,6 +12,173 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Blog=Github+Octopress]]></title>
+    <link href="http://KingWa.github.io/blog/2014/04/24/blog-equals-github-plus-octopress/"/>
+    <updated>2014-04-24T22:44:20+08:00</updated>
+    <id>http://KingWa.github.io/blog/2014/04/24/blog-equals-github-plus-octopress</id>
+    <content type="html"><![CDATA[<h2>Why I write blogs</h2>
+
+<p>Actually, I am not a blog heavy writer. I use blog most as a tool to write down my thoughts, my experience and my notes.</p>
+
+<h2>Why I choose Github and Octopress</h2>
+
+<p>A blog should provides following functions as I see:
+1. Full freedom to control content of all blog post, ease to access and migrate the content. <a href="github.com">Github</a> is an ideal place to host a blog for it provides free disk space and free version control service, and most of all it is becoming the facebook for hackers.
+2. Ability to embed code snippets. <a href="jekyllrb.com">Jekyll</a> and <a href="octopress.org">Octopress</a> both suit.
+3. Ability to support latex. This is what I really like.</p>
+
+<h2>How I built up this blog</h2>
+
+<p>There are many blog posts that guides how to build up a blog with Github and Octopress, links below are where I have got tips from:
+1. <a href="http://chuchao333.github.io/blog/2012/07/25/octopress-and-github/">ChuChao333</a>
+2. <a href="http://code.dblock.org/octopress-setting-up-a-blog-and-contributing-to-an-existing-one">dblock</a>
+3. <a href="http://www.gerardcondon.com/blog/2012/03/04/setting-up-octopress-and-github/">gerardcondon</a>
+4. <a href="octopress.org">octopress</a></p>
+
+<p>Below are my steps:</p>
+
+<h2>Install Ruby</h2>
+
+<p>Octopress is a blogging framework based on Jekyll and which is written in Ruby. I am very new to Ruby, so I just followed other&rsquo;s introduction to install Ruby by <a href="rvm.io">RVM</a>.</p>
+
+<p>RVM(Ruby Version Manager), as its name says, is a software platform designed to manage multiple installations of Rury on the same device. Before installing RVM, we need to check whether following softwares are already installed.</p>
+
+<h1>bash, awk, sed, grep, ls, cp, tar, curl, gunzip, bunzip2, git, svn</h1>
+
+<p>After requirements were meet, use following command to install RVM:</p>
+
+<div>
+  <pre><code class='shell'>caojinghua@debian:~$ \curl -sSL https://get.rvm.io | bash -s stable --ruby</code></pre>
+</div>
+
+
+<p>Above is the Single-User installation, which means the rvm is installed in the current user&rsquo;s home directory, that is &lsquo;~/.rvm&rsquo;. After this, we should use following command to load RVM:</p>
+
+<div>
+  <pre><code class='shell'>caojinghua@debian:~$ source ~/.rvm/scripts/rvm</code></pre>
+</div>
+
+
+<p>Use following command to test whether RVM is installed successfully:</p>
+
+<div>
+  <pre><code class='shell'>caojinghua@debian:~$ type rvm | head -n 1</code></pre>
+</div>
+
+
+<p>After RVM was installed, we install Ruby 1.9.3 as follows:</p>
+
+<div>
+  <pre><code class='shell'>caojinghua@debian:~$ rvm install 1.9.3</code></pre>
+</div>
+
+
+<p>We set this version of Ruby to use as the default for new shells:</p>
+
+<div>
+  <pre><code class='shell'>caojinghua@debian:~$ rvm use 1.9.3 --default</code></pre>
+</div>
+
+
+<p>To test whether Ruby was installed successfully:</p>
+
+<div>
+  <pre><code class='shell'>caojinghua@debian:~$ ruby -v</code></pre>
+</div>
+
+
+<h2>Install Octopress</h2>
+
+<p>Clone the git repository of Octopress:</p>
+
+<div>
+  <pre><code class='shell'>caojinghua@debian:~/myworkstation$ git clone git://github.com/imathis/octopress.git octopress
+caojinghua@debian:~/myworkstation$ cd octopress/</code></pre>
+</div>
+
+
+<p>Next, install Octopress&rsquo;s dependencies:</p>
+
+<div>
+  <pre><code class='shell'>caojinghua@debian:~/myworkstation/octopress$ gem install bundler
+caojinghua@debian:~/myworkstation/octopress$ bundle install</code></pre>
+</div>
+
+
+<p>It was the last command that I have wait a long time for, due to my unstable network speed.</p>
+
+<p>Next, install Octopress&rsquo;s default theme:</p>
+
+<div>
+  <pre><code class='shell'>caojinghua@debian:~/myworkstation/octopress$ rake install</code></pre>
+</div>
+
+
+<p>By now we have installed Octopress successfully.</p>
+
+<h2>Create a new repository in GitHub for the blog</h2>
+
+<p>We need a repository in GitHub that stores all static web pages and source files of the blog, and Github would show these pages in such an URL: <em>uername</em>.github.io, where <em>username</em> is the name of your Github account, and the repository&rsquo;s name should follow this format: <em>username</em>.github.io.</p>
+
+<h2>Configure Octopress to the Github repository</h2>
+
+<p>The octopress repository we installed previouly contains several tasks to generate our blog. Use following task to generate a blog:</p>
+
+<div>
+  <pre><code class='shell'>caojinghua@debian:~/myworkstation/octopress$ rake setup_github_pages</code></pre>
+</div>
+
+
+<p>Several things were done in this command:
+1. Since the remote origin points to &ldquo;git://github.com/imathis/octopress.git&rdquo;, it set up a new remote reference name &ldquo;octopress&rdquo; that points to &ldquo;git://github.com/imathis/octopress.git&rdquo;.
+2. Change the remote origin points to &ldquo;git@github.com:<em>username</em>/<em>username</em>.github.io.git&rdquo;, so as to attach to the github repository while doing &ldquo;git pull or git push&rdquo; commands.
+3. Rename octopress repository&rsquo;s master branch to &ldquo;source&rdquo;. So while doing &ldquo;git push origin source&rdquo;, all updated objects in the local source branch would be pushed into the remote github repository(<em>username</em>.github.io)&rsquo;s source branch. And we have successfully make the local octopress source branch mapping to the remote <em>username</em>.github.io repository&rsquo;s source branch. Each time we have update in this source branch, we should push it to the corresponding remote branch.
+4. Create a directory &ldquo;<em>deploy&rdquo; within the octopress directory, and git clone the <em>username</em>.github.io repository&rsquo;s master branch into this &ldquo;</em>deploy&rdquo; directory. &ldquo;<em>deploy&rdquo; directory contains all files generated by octopress and that are ready to show as web pages. Each time we have updated blog post, we should regenerate files, and git push &ldquo;</em>deploy&rdquo; directory&rsquo;s files to remote <em>username</em>.github.io &rsquo;s master branch, that&rsquo;s where Github grap web pages from to show our blog.</p>
+
+<h2>Generate post and deploy</h2>
+
+<p>Now, all is ready. We use following task to generate a new post:</p>
+
+<div>
+  <pre><code class='shell'>caojinghua@debian:~/myworkstation/octopress$ rake new_post[&quot;*title*&quot;]</code></pre>
+</div>
+
+
+<p>Use following task to regenerate all files:</p>
+
+<div>
+  <pre><code class='shell'>caojinghua@debian:~/myworkstation/octopress$ rake generate</code></pre>
+</div>
+
+
+<p>This task would scan files within &ldquo;source&rdquo; directory, and output all generated files in &ldquo;public&rdquo; directory. After that, we should git push updated contents to remote <em>username</em>.github.io &rsquo;s source branch by:</p>
+
+<div>
+  <pre><code class='shell'>caojinghua@debian:~/myworkstation/octopress$ git add .
+caojinghua@debian:~/myworkstation/octopress$ git commit -m &quot;blog post update&quot;
+caojinghua@debian:~/myworkstation/octopress$ git push origin source</code></pre>
+</div>
+
+
+<p>Next, we can deploy our blog by:</p>
+
+<div>
+  <pre><code class='shell'>caojinghua@debian:~/myworkstation/octopress$ rake deploy</code></pre>
+</div>
+
+
+<p>This task would commit all updated content in &ldquo;_deploy&rdquo; directory, and git push it to the remote <em>username</em>.github.io &rsquo;s master branch.</p>
+
+<h2>Summary</h2>
+
+<p>I think several ponts are important during this building process:
+1. Master git, at least understand the essence of git.
+2. Try to use ssh to connect to github repository.
+3. Patience is needed.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Welcome]]></title>

@@ -30,6 +30,15 @@
 <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 
+<!-- mathjax config similar to math.stackexchange -->
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        text2jax: { inlineMath: [ ["$", "$"], ["\\\\(", "\\\\)"] ], displayMath: [ ["$$", "$$"], ["\\[", "\\]"] ], processEscapes: true }
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
+
+
   
 
 </head>
@@ -89,7 +98,7 @@
 <p>Contact me at</p>
 
 <ul>
-<li><strong>Email:</strong> caojinghuahaha (at) gmail (dot) com</li>
+  <li><strong>Email:</strong> caojinghuahaha (at) gmail (dot) com</li>
 </ul>
 
 
@@ -133,6 +142,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/04/26/support-latex-in-octopress/">Support Latex in Octopress</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/04/24/blog-equals-github-plus-octopress/">Blog=Github+Octopress</a>

@@ -7,6 +7,16 @@ categories:
 ---
 Ways to share code snippets in Octopress:
 
+Use the pygment's highlight
+---------------------------
+The syntax is: \{% highlight language linenos %} code \{% endhighlight %}
+
+
+Simply use markdown
+-------------------
+To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab.
+
+
 Backtick Code Blocks
 --------------------
 Syntax:

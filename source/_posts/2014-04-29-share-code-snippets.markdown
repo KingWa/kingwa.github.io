@@ -9,7 +9,12 @@ Ways to share code snippets in Octopress:
 
 Use the pygment's highlight
 ---------------------------
-The syntax is: \{% highlight language linenos %} code \{% endhighlight %}
+The syntax is: 
+{% highlight text %}
+{% highlight language linenos %}
+code 
+{% endhighlight %}
+{% endhighlight %}
 
 
 Simply use markdown

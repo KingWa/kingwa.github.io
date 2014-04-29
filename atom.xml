@@ -4,7 +4,7 @@
   <title><![CDATA[Hacking For Fun]]></title>
   <link href="http://KingWa.github.io/atom.xml" rel="self"/>
   <link href="http://KingWa.github.io/"/>
-  <updated>2014-04-29T22:09:22+08:00</updated>
+  <updated>2014-04-29T22:17:57+08:00</updated>
   <id>http://KingWa.github.io/</id>
   <author>
     <name><![CDATA[KingWah]]></name>
@@ -21,9 +21,12 @@
     <content type="html"><![CDATA[<p>Ways to share code snippets in Octopress:</p>
 
 <h2 id="use-the-pygments-highlight">Use the pygment’s highlight</h2>
-<p>The syntax is: &lt;div&gt;</p>
-<pre><code class="language">code \</code></pre>
-<p>&lt;/div&gt;</p>
+<p>The syntax is: </p>
+<div>
+  <pre><code class="text">&lt;div&gt;
+  &lt;pre&gt;&lt;code class='language'&gt;code&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</code></pre>
+</div>
 
 <h2 id="simply-use-markdown">Simply use markdown</h2>
 <p>To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab.</p>

@@ -4,7 +4,7 @@
   <title><![CDATA[Hacking For Fun]]></title>
   <link href="http://KingWa.github.io/atom.xml" rel="self"/>
   <link href="http://KingWa.github.io/"/>
-  <updated>2014-04-29T22:24:01+08:00</updated>
+  <updated>2014-04-30T22:45:03+08:00</updated>
   <id>http://KingWa.github.io/</id>
   <author>
     <name><![CDATA[KingWah]]></name>
@@ -21,29 +21,42 @@
     <content type="html"><![CDATA[<p>Ways to share code snippets in Octopress:</p>
 
 <h2 id="use-the-pygments-highlight">Use the pygment’s highlight</h2>
-<p>The syntax is: 
-&lt;div class=&#8221;highlight&#8221;&gt;</p>
-<pre>
-    <code class="text"><div>
-  <pre><code class="ruby">code ......</code></pre>
+<p>The syntax is: </p>
+
+<p>{% highlight language linenos %}
+{% endhighlight %}</p>
+
+<p>where language is the pygment’s supporting <a href="pygments.org/languages">language</a>, linenos(optional) means showing line number.</p>
+
+<p>For example, bellow:</p>
+
+<p>{% highlight c linenos %}
+int main(int argc, char* argv[])
+{
+    printf(“Hello, world!\n”);
+    return 0;
+}
+{% endhighlight %}</p>
+
+<p>shows:</p>
+<div>
+  <pre><code class="c">int main(int argc, char* argv[])
+{
+    printf(&quot;Hello, world!\n&quot;);
+    return 0;
+}</code></pre>
 </div>
 
-  
+<h2 id="simply-use-markdown">Simply use markdown</h2>
+<p>To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab.</p>
 
-
-Simply use markdown
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
-To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab.
-
-
-Backtick Code Blocks
-&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;
-Syntax:
-    &#8220;` [language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]
+<h2 id="backtick-code-blocks">Backtick Code Blocks</h2>
+<p>Syntax:
+    <code>[language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]
     code snippet
-    &#8220;`
+   </code></p>
 
-For example, bellow:
+<p>For example, bellow:</p>
 <div>
   <pre><code class="text">&lt;div class='bogus-wrapper'&gt;&lt;notextile&gt;&lt;figure class='code'&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class='line-number'&gt;1&lt;/span&gt;
 &lt;span class='line-number'&gt;2&lt;/span&gt;
@@ -57,17 +70,17 @@ For example, bellow:
 &lt;/span&gt;&lt;span class='line'&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/notextile&gt;&lt;/div&gt;</code></pre>
 </div>
 
-shows:
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<p>shows:
+&lt;div class=&#8217;bogus-wrapper&#8217;&gt;<notextile><figure class="code">&lt;div class=&#8221;highlight&#8221;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#8221;gutter&#8221;&gt;&lt;pre class=&#8221;line-numbers&#8221;&gt;<span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 <span class="line-number">4</span>
 <span class="line-number">5</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">int main(int argc, char* argv[])
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;<code class=""><span class="line">int main(int argc, char* argv[])
 </span><span class="line">{
 </span><span class="line">    printf("%s\n", "Hello, world!");
 </span><span class="line">    return 0;
-</span><span class="line">}</span></code></pre></td></tr></table></div></figure></notextile></div>
+</span><span class="line">}</span></code>&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</figure></notextile>&lt;/div&gt;</p>
 <div>
   <pre><code class="text">&lt;div class='bogus-wrapper'&gt;&lt;notextile&gt;&lt;figure class='code'&gt;&lt;figcaption&gt;&lt;span&gt;&lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class='line-number'&gt;1&lt;/span&gt;
 &lt;span class='line-number'&gt;2&lt;/span&gt;
@@ -82,18 +95,18 @@ shows:
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/notextile&gt;&lt;/div&gt;</code></pre>
 </div>
 
-shows:
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<p>shows:
+&lt;div class=&#8217;bogus-wrapper&#8217;&gt;<notextile><figure class="code">&lt;figcaption&gt;<span></span>&lt;/figcaption&gt;&lt;div class=&#8221;highlight&#8221;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#8221;gutter&#8221;&gt;&lt;pre class=&#8221;line-numbers&#8221;&gt;<span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 <span class="line-number">4</span>
 <span class="line-number">5</span>
-</pre></td><td class="code"><pre><code class="c"><span class="line"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;<code class="c"><span class="line"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
 </span><span class="line"><span class="p">{</span>
 </span><span class="line">    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="s">&quot;Hello, world!&quot;</span><span class="p">);</span>
 </span><span class="line">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span><span class="line"><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+</span></code>&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</figure></notextile>&lt;/div&gt;</p>
 <div>
   <pre><code class="text">&lt;div class='bogus-wrapper'&gt;&lt;notextile&gt;&lt;figure class='code'&gt;&lt;figcaption&gt;&lt;span&gt;&quot;Hello World.cpp&quot; mark:3 &lt;/span&gt;&lt;/figcaption&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre class=&quot;line-numbers&quot;&gt;&lt;span class='line-number'&gt;1&lt;/span&gt;
 &lt;span class='line-number'&gt;2&lt;/span&gt;
@@ -108,21 +121,19 @@ shows:
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/figure&gt;&lt;/notextile&gt;&lt;/div&gt;</code></pre>
 </div>
 
-shows:
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>&#8220;Hello World.cpp&#8221; mark:3 </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<p>shows:
+&lt;div class=&#8217;bogus-wrapper&#8217;&gt;<notextile><figure class="code">&lt;figcaption&gt;<span>&#8220;Hello World.cpp&#8221; mark:3 </span>&lt;/figcaption&gt;&lt;div class=&#8221;highlight&#8221;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#8221;gutter&#8221;&gt;&lt;pre class=&#8221;line-numbers&#8221;&gt;<span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 <span class="line-number">4</span>
 <span class="line-number">5</span>
-</pre></td><td class="code"><pre><code class="c"><span class="line"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#8217;code&#8217;&gt;&lt;pre&gt;<code class="c"><span class="line"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
 </span><span class="line"><span class="p">{</span>
 </span><span class="line">    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="s">&quot;Hello, world!&quot;</span><span class="p">);</span>
 </span><span class="line">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span><span class="line"><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+</span></code>&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</figure></notextile>&lt;/div&gt;</p>
 
-
-</code></pre>
 ]]></content>
   </entry>
   

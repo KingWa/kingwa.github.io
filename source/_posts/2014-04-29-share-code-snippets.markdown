@@ -40,11 +40,13 @@ Simply use markdown
 -------------------
 To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab.
 Such as:
+    {% raw %}
     int main(int argc, char* argv[])
     {
         printf("Hello, world!\n");
         return 0;
     }
+    {% endraw %}
 
 
 Backtick Code Blocks
@@ -67,13 +69,13 @@ For example, bellow:
     ```
     {% endraw %}
 shows:
-``` 
+```  
 int main(int argc, char* argv[])
 {
     printf("%s\n", "Hello, world!");
     return 0;
 }
-```
+``` 
 
 and 
     {% raw %}

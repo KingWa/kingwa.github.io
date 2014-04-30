@@ -4,7 +4,7 @@
   <title><![CDATA[Hacking For Fun]]></title>
   <link href="http://KingWa.github.io/atom.xml" rel="self"/>
   <link href="http://KingWa.github.io/"/>
-  <updated>2014-04-30T22:45:03+08:00</updated>
+  <updated>2014-04-30T22:55:50+08:00</updated>
   <id>http://KingWa.github.io/</id>
   <author>
     <name><![CDATA[KingWah]]></name>
@@ -23,8 +23,9 @@
 <h2 id="use-the-pygments-highlight">Use the pygment’s highlight</h2>
 <p>The syntax is: </p>
 
-<p>{% highlight language linenos %}
-{% endhighlight %}</p>
+<pre><code>{% highlight language linenos %}
+{% endhighlight %}
+</code></pre>
 
 <p>where language is the pygment’s supporting <a href="pygments.org/languages">language</a>, linenos(optional) means showing line number.</p>
 

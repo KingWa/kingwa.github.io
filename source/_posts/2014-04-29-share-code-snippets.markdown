@@ -10,13 +10,31 @@ Ways to share code snippets in Octopress:
 Use the pygment's highlight
 ---------------------------
 The syntax is: 
-<div class="highlight">
-  <pre>
-    <code class="text">{% highlight ruby %}
-    code ......
-    {% endhighlight %}
-  </pre>
-</div>
+{% raw %}
+{% highlight language linenos %}
+{% endhighlight %}
+{% endraw %}
+where language is the pygment's supporting [language](pygments.org/languages), linenos(optional) means showing line number.
+
+For example, bellow:
+{% raw %}
+{% highlight c linenos %}
+int main(int argc, char* argv[])
+{
+    printf("Hello, world!\n");
+    return 0;
+}
+{% endhighlight %}
+{% endraw %}
+shows:
+{% highlight c linenos %}
+int main(int argc, char* argv[])
+{
+    printf("Hello, world!\n");
+    return 0;
+}
+{% endhighlight %}
+
 
 Simply use markdown
 -------------------

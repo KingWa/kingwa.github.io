@@ -14,20 +14,20 @@ The syntax is:
     {% highlight language linenos %}
     {% endhighlight %}
     {% endraw %}
-where language is the pygment's supporting [language](pygments.org/languages), linenos(optional) means showing line number.
+where language is the pygment's supporting [language](http://www.pygments.org/languages), linenos(optional) means showing line number.
 
 For example, bellow:
-{% raw %}
-{% highlight c linenos %}
-int main(int argc, char* argv[])
-{
-    printf("Hello, world!\n");
-    return 0;
-}
-{% endhighlight %}
-{% endraw %}
+    {% raw %}
+    {% highlight c %}
+    int main(int argc, char* argv[])
+    {
+        printf("Hello, world!\n");
+        return 0;
+    }
+    {% endhighlight %}
+    {% endraw %}
 shows:
-{% highlight c linenos %}
+{% highlight c %}
 int main(int argc, char* argv[])
 {
     printf("Hello, world!\n");
@@ -39,61 +39,35 @@ int main(int argc, char* argv[])
 Simply use markdown
 -------------------
 To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab.
+Such as:
+    int main(int argc, char* argv[])
+    {
+        printf("Hello, world!\n");
+        return 0;
+    }
 
 
 Backtick Code Blocks
 --------------------
 Syntax:
+    {% raw %}
     ``` [language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]
     code snippet
     ```
+    {% endraw %}
 
 For example, bellow:
-{% highlight text %}
-``` 
-int main(int argc, char* argv[])
-{
-    printf("%s\n", "Hello, world!");
-    return 0;
-}
-```
-{% endhighlight %}
+    {% raw %}
+    ``` 
+    int main(int argc, char* argv[])
+    {
+        printf("%s\n", "Hello, world!");
+        return 0;
+    }
+    ```
+    {% endraw %}
 shows:
 ``` 
-int main(int argc, char* argv[])
-{
-    printf("%s\n", "Hello, world!");
-    return 0;
-}
-```
-{% highlight text %}
-``` c  
-int main(int argc, char* argv[])
-{
-    printf("%s\n", "Hello, world!");
-    return 0;
-}
-```
-{% endhighlight %}
-shows:
-``` c  
-int main(int argc, char* argv[])
-{
-    printf("%s\n", "Hello, world!");
-    return 0;
-}
-```
-{% highlight text %}
-``` c "Hello World.cpp" mark:3 
-int main(int argc, char* argv[])
-{
-    printf("%s\n", "Hello, world!");
-    return 0;
-}
-```
-{% endhighlight %}
-shows:
-``` c "Hello World.cpp" mark:3 
 int main(int argc, char* argv[])
 {
     printf("%s\n", "Hello, world!");
@@ -101,4 +75,42 @@ int main(int argc, char* argv[])
 }
 ```
 
+and 
+    {% raw %}
+
+    ``` c  
+    int main(int argc, char* argv[])
+    {
+        printf("%s\n", "Hello, world!");
+        return 0;
+    }
+    ```
+    {% endraw %}
+shows:
+``` c  
+int main(int argc, char* argv[])
+{
+    printf("%s\n", "Hello, world!");
+    return 0;
+}
+```
+
+and
+    {% raw %}
+    ``` c "Hello World.cpp" mark:3 
+    int main(int argc, char* argv[])
+    {
+        printf("%s\n", "Hello, world!");
+        return 0;
+    }
+    ```
+    {% endraw %}
+shows:
+``` c "Hello World.cpp" mark:3 
+int main(int argc, char* argv[])
+{
+    printf("%s\n", "Hello, world!");
+    return 0;
+}
+```
 

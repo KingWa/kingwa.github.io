@@ -10,10 +10,10 @@ Ways to share code snippets in Octopress:
 Use the pygment's highlight
 ---------------------------
 The syntax is: 
-{% raw %}
-{% highlight language linenos %}
-{% endhighlight %}
-{% endraw %}
+    {% raw %}
+    {% highlight language linenos %}
+    {% endhighlight %}
+    {% endraw %}
 where language is the pygment's supporting [language](pygments.org/languages), linenos(optional) means showing line number.
 
 For example, bellow:

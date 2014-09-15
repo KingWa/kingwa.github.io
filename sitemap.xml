@@ -2,7 +2,6 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://KingWa.github.io/blog/2014/04/24/welcome/</loc>
-<<<<<<< HEAD
         <lastmod>2014-09-14T01:17:34+08:00</lastmod>
     </url>
     <url>
@@ -16,10 +15,6 @@
     <url>
         <loc>http://KingWa.github.io/blog/2014/04/29/share-code-snippets/</loc>
         <lastmod>2014-09-14T01:17:34+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://KingWa.github.io/blog/2014/09/15/a-test-post/</loc>
-        <lastmod>2014-09-15T17:25:42+08:00</lastmod>
     </url>
     <url>
         <loc>http://KingWa.github.io/blog/2014/09/15/testpost/</loc>
@@ -40,36 +35,5 @@
     <url>
         <loc>http://KingWa.github.io/blog/archives/</loc>
         <lastmod>2014-09-15T17:26:31+08:00</lastmod>
-=======
-        <lastmod>2014-04-24T14:03:00+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://KingWa.github.io/blog/2014/04/24/blog-equals-github-plus-octopress/</loc>
-        <lastmod>2014-04-25T12:16:52+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://KingWa.github.io/blog/2014/04/26/support-latex-in-octopress/</loc>
-        <lastmod>2014-04-28T23:04:41+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://KingWa.github.io/blog/2014/04/29/share-code-snippets/</loc>
-        <lastmod>2014-05-03T16:50:24+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://KingWa.github.io/blog/archives/</loc>
-        <lastmod>2014-05-03T16:50:24+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://KingWa.github.io/</loc>
-        <lastmod>2014-05-03T16:50:24+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://KingWa.github.io/robots.txt</loc>
-        <lastmod>2014-04-20T09:03:26+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://KingWa.github.io/about/</loc>
-        <lastmod>2014-04-25T14:04:09+08:00</lastmod>
->>>>>>> 429aaeba1e889adbc8aead737316a2029d94b7c2
     </url>
 </urlset>

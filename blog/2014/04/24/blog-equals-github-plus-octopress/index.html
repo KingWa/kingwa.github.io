@@ -5,13 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hacking For Fun</title>
+  <title>Blog=Github+Octopress - Hacking For Fun</title>
   <meta name="author" content="KingWah">
 
   
-  <meta name="description" content="Ways to share code snippets in Octopress: Use the pygment’s highlight
-The syntax is: {% highlight language linenos %}
-{% endhighlight %} where &hellip;">
+  <meta name="description" content="Why I write blogs
+Actually, I am not a blog heavy writer. I use blog most as a tool to write down my thoughts, my experience and my notes. Why I &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -20,7 +19,7 @@ The syntax is: {% highlight language linenos %}
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://KingWa.github.io">
+  <link rel="canonical" href="http://KingWa.github.io/blog/2014/04/24/blog-equals-github-plus-octopress">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Hacking For Fun" type="application/atom+xml">
@@ -75,306 +74,12 @@ The syntax is: {% highlight language linenos %}
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2014/04/29/share-code-snippets/">Share Code Snippets</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-29T21:32:59+08:00" pubdate data-updated="true">Apr 29<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Ways to share code snippets in Octopress:</p>
-
-<h2 id="use-the-pygments-highlight">Use the pygment’s highlight</h2>
-<p>The syntax is: </p>
-
-<pre><code>{% highlight language linenos %}
-{% endhighlight %}
-</code></pre>
-
-<p>where language is the pygment’s supporting <a href="http://www.pygments.org/languages">language</a>, linenos(optional) means showing line number.</p>
-
-<p>For example, bellow:</p>
-
-<pre><code>{% highlight c %}
-int main(int argc, char* argv[])
-{
-    printf("Hello, world!\n");
-    return 0;
-}
-{% endhighlight %}
-</code></pre>
-
-<p>shows:</p>
-<div>
-  <pre><code class="c">int main(int argc, char* argv[])
-{
-    printf(&quot;Hello, world!\n&quot;);
-    return 0;
-}</code></pre>
-</div>
-
-<h2 id="simply-use-markdown">Simply use markdown</h2>
-<p>To produce a code block in Markdown, simply indent every line of the block by at least 4 spaces or 1 tab.
-Such as:</p>
-
-<pre><code>int main(int argc, char* argv[])
-{
-    printf("Hello, world!\n");
-    return 0;
-}
-</code></pre>
-
-<h2 id="backtick-code-blocks">Backtick Code Blocks</h2>
-<p>Syntax:</p>
-
-<pre><code>``` [language] [title] [url] [link text] [linenos:false] [start:#] [mark:#,#-#]
-code snippet
-```
-</code></pre>
-
-<p>For example, bellow:</p>
-
-<pre><code>``` 
-int main(int argc, char* argv[])
-{
-    printf("%s\n", "Hello, world!");
-    return 0;
-}
-```
-</code></pre>
-
-<p>shows:</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">int main(int argc, char* argv[])
-</span><span class="line">{
-</span><span class="line">    printf("%s\n", "Hello, world!");
-</span><span class="line">    return 0;
-</span><span class="line">}</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>and </p>
-
-<pre><code>``` c  
-int main(int argc, char* argv[])
-{
-    printf("%s\n", "Hello, world!");
-    return 0;
-}
-```
-</code></pre>
-
-<p>shows:</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-</pre></td><td class="code"><pre><code class="c"><span class="line"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
-</span><span class="line"><span class="p">{</span>
-</span><span class="line">    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="s">&quot;Hello, world!&quot;</span><span class="p">);</span>
-</span><span class="line">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class="line"><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>and</p>
-
-<pre><code>``` c "Hello World.cpp" mark:3 
-int main(int argc, char* argv[])
-{
-    printf("%s\n", "Hello, world!");
-    return 0;
-}
-```
-</code></pre>
-
-<p>shows:</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>&#8220;Hello World.cpp&#8221; mark:3 </span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-</pre></td><td class="code"><pre><code class="c"><span class="line"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span><span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
-</span><span class="line"><span class="p">{</span>
-</span><span class="line">    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;%s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="s">&quot;Hello, world!&quot;</span><span class="p">);</span>
-</span><span class="line">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-</span><span class="line"><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/26/support-latex-in-octopress/">Support LaTex in Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-26T16:29:48+08:00" pubdate data-updated="true">Apr 26<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>There are many posts introducing how to support Latex in Octopress, and how to display math formulars in web pages, bellow is what I have done.</p>
-
-<h2 id="mathjx">MathJX</h2>
-<p>Many websites use <a href="www.mathjax.org">MathJX</a> to display math symbols and formulars. MathJX is an open source JavaScript display engine for mathematics works in all browsers. Because it was writted in JavaScript, it does not require browser plugins to display math symbols, and it is indeed very attracted in developers and users’ eyes.</p>
-
-<h2 id="how-do-math-stackexchange-do">How do Math StackExchange do?</h2>
-<p>Math StackExchange use following javascript code to config the MathJX engine:</p>
-<div>
-  <pre><code class="JavaScript">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
-    MathJax.Hub.Config({&quot;HTML-CSS&quot;: { preferredFont: &quot;TeX&quot;, availableFonts: [&quot;STIX&quot;,&quot;TeX&quot;], linebreaks: { automatic:true }, EqnChunk:(MathJax.Hub.Browser.isMobile ? 10 : 50) },
-                        tex2jax: { inlineMath: [ [&quot;$&quot;, &quot;$&quot;], [&quot;\\\\(&quot;,&quot;\\\\)&quot;] ], displayMath: [ [&quot;$$&quot;,&quot;$$&quot;], [&quot;\\[&quot;, &quot;\\]&quot;] ], processEscapes: true,ignoreClass: &quot;tex2jax_ignore|dno&quot; },
-                        TeX: {  noUndefined: { attributes: { mathcolor: &quot;red&quot;, mathbackground: &quot;#FFEEEE&quot;, mathsize: &quot;90%&quot; } }, Macros: { href: &quot;{}&quot; } },
-                        messageStyle: &quot;none&quot;
-                      });
-&lt;/script&gt;
-&lt;script src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full&quot;&gt;&lt;/script&gt;</code></pre>
-</div>
-
-<h2 id="would-markdowns-format-overlays-with-latex">Would markdown’s format overlays with LaTex?</h2>
-<p>Actually, yes. Some standard markdown’s format does. However, Kramdown does support an additional syntax feature to support Latex, as the <a href="http://kramdown.gettalong.org/syntax.html\#math-blocks">ducument</a> said.</p>
-<div>
-  <pre><code class="text">A math block needs to start and end on block boundaries. It is started using two dollar signs, optionally indented up to three spaces. The math block continues until the next two dollar signs(which may be on the same line or on one of the next lines) that appear at the end of a line. The content of a math block has to be valid LaTex math. It is always wrapped inside a \begin{displaymath}...\end{displaymath} environtment except if it begins with a \begin statement.
-
-Using inline math is also easy: just surround your math content with two dollar signs, like with a math block.</code></pre>
-</div>
-
-<h2 id="overall-how-to-do">Overall, how to do?</h2>
-<ul>
-  <li>Config the MathJX engine in each html files head as follow:</li>
-</ul>
-<div>
-  <pre><code class="JavaScript">&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
-    MathJax.Hub.Config({
-        text2jax: { inlineMath: [ [&quot;$&quot;, &quot;$&quot;], [&quot;\\\\(&quot;, &quot;\\\\)&quot;] ], displayMath: [ [&quot;$$&quot;, &quot;$$&quot;], [&quot;\\[&quot;, &quot;\\]&quot;] ], processEscapes: true }
-    });
-&lt;/script&gt;
-&lt;script src=&quot;http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full&quot;&gt;&lt;/script&gt;</code></pre>
-</div>
-
-<ul>
-  <li>Change the config markdown engine to kramdown in “_config.yml”.
-That’s all. Let’s have some exmaples.</li>
-</ul>
-
-<ol>
-  <li>Show a complex math block:</li>
-</ol>
-<div>
-  <pre><code class="text">$$
-\begin{align*}
-  &amp; \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  &amp; (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) &amp; \cdots &amp; \phi(e_1, e_n) \\
-      \vdots &amp; \ddots &amp; \vdots \\
-      \phi(e_n, e_1) &amp; \cdots &amp; \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-       y_1 \\
-       \vdots \\
-       y_n
-    \end{array} \right)
-\end{align*}
-$$</code></pre>
-</div>
-
-<script type="math/tex; mode=display">% <![CDATA[
-
-\begin{align*}
-  & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
-  = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
-  & (x_1, \ldots, x_n) \left( \begin{array}{ccc}
-      \phi(e_1, e_1) & \cdots & \phi(e_1, e_n) \\
-      \vdots & \ddots & \vdots \\
-      \phi(e_n, e_1) & \cdots & \phi(e_n, e_n)
-    \end{array} \right)
-  \left( \begin{array}{c}
-       y_1 \\
-       \vdots \\
-       y_n
-    \end{array} \right)
-\end{align*}
- %]]></script>
-
-<ol>
-  <li>Show an inline math:</li>
-</ol>
-<div>
-  <pre><code class="text">this is an inline math: $$ x=y+z $$.</code></pre>
-</div>
-
-<p>this is an inline math: <script type="math/tex"> x=y+z </script>.</p>
-
-<p>How about this one: $$ x=y+z $$.</p>
-
-<p>And how about this: $$ x=y+z $$.</p>
-
-</div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/24/blog-equals-github-plus-octopress/">Blog=Github+Octopress</a></h1>
+      <h1 class="entry-title">Blog=Github+Octopress</h1>
     
     
       <p class="meta">
@@ -397,7 +102,7 @@ $$</code></pre>
   </header>
 
 
-  <div class="entry-content"><h2 id="why-i-write-blogs">Why I write blogs</h2>
+<div class="entry-content"><h2 id="why-i-write-blogs">Why I write blogs</h2>
 <p>Actually, I am not a blog heavy writer. I use blog most as a tool to write down my thoughts, my experience and my notes.</p>
 
 <h2 id="why-i-choose-github-and-octopress">Why I choose Github and Octopress</h2>
@@ -543,22 +248,16 @@ caojinghua@debian:~/myworkstation/octopress$ git push origin source</code></pre>
 </ol>
 
 </div>
-  
-  
 
 
-    </article>
-  
-  
-    <article>
+  <footer>
+    <p class="meta">
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/24/welcome/">Welcome</a></h1>
-    
-    
-      <p class="meta">
-        
+  
+
+<span class="byline author vcard">Posted by <span class="fn">KingWah</span></span>
+
+      
 
 
 
@@ -570,27 +269,34 @@ caojinghua@debian:~/myworkstation/octopress$ git push origin source</code></pre>
   
 
 
-<time datetime="2014-04-24T14:00:40+08:00" pubdate data-updated="true">Apr 24<span>th</span>, 2014</time>
-        
-      </p>
+<time datetime="2014-04-24T22:44:20+08:00" pubdate data-updated="true">Apr 24<span>th</span>, 2014</time>
+      
+
+
+    </p>
     
-  </header>
-
-
-  <div class="entry-content"><p>Welcome to my blog.</p>
+      <div class="sharing">
+  
+  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://KingWa.github.io/blog/2014/04/24/blog-equals-github-plus-octopress/" data-via="" data-counturl="http://KingWa.github.io/blog/2014/04/24/blog-equals-github-plus-octopress/" >Tweet</a>
+  
+  
+  
 </div>
-  
-  
 
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/04/24/welcome/" title="Previous Post: Welcome">&laquo; Welcome</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2014/04/26/support-latex-in-octopress/" title="Next Post: Support LaTex In Octopress">Support LaTex In Octopress &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
 </div>
+
 <aside class="sidebar">
   
     <section>
@@ -622,6 +328,7 @@ caojinghua@debian:~/myworkstation/octopress$ git push origin source</code></pre>
 
   
 </aside>
+
 
     </div>
   </div>

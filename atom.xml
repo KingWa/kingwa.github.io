@@ -1,112 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <title>Hacking For Fun</title>
-  <meta name="author" content="KingWah">
-
-  
-  <meta name="description" content="Ways to share code snippets in Octopress: Use the pygment’s highlight
-The syntax is: {% highlight language linenos %}
-{% endhighlight %} where &hellip;">
-  
-
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://KingWa.github.io">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Hacking For Fun" type="application/atom+xml">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-<!-- mathjax config similar to math.stackexchange -->
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        text2jax: { inlineMath: [ ["$", "$"], ["\\\\(", "\\\\)"] ], displayMath: [ ["$$", "$$"], ["\\[", "\\]"] ], processEscapes: true }
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML-full"></script>
-
-
-  
-
-</head>
-
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Hacking For Fun</a></h1>
-  
-    <h2>Fun for Hacking</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="https://www.google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:KingWa.github.io" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-  <li><a href="/about">About</a></li>
-</ul>
-
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
+  <title><![CDATA[Hacking For Fun]]></title>
+  <link href="http://KingWa.github.io/atom.xml" rel="self"/>
+  <link href="http://KingWa.github.io/"/>
+  <updated>2014-09-15T17:02:11+08:00</updated>
+  <id>http://KingWa.github.io/</id>
+  <author>
+    <name><![CDATA[KingWah]]></name>
     
-      <h1 class="entry-title"><a href="/blog/2014/04/29/share-code-snippets/">Share Code Snippets</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
 
   
-
-
-<time datetime="2014-04-29T21:32:59+08:00" pubdate data-updated="true">Apr 29<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Ways to share code snippets in Octopress:</p>
+  <entry>
+    <title type="html"><![CDATA[Share Code Snippets]]></title>
+    <link href="http://KingWa.github.io/blog/2014/04/29/share-code-snippets/"/>
+    <updated>2014-04-29T21:32:59+08:00</updated>
+    <id>http://KingWa.github.io/blog/2014/04/29/share-code-snippets</id>
+    <content type="html"><![CDATA[<p>Ways to share code snippets in Octopress:</p>
 
 <h2 id="use-the-pygments-highlight">Use the pygment’s highlight</h2>
 <p>The syntax is: </p>
@@ -230,42 +142,15 @@ int main(int argc, char* argv[])
 </span><span class="line"><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/26/support-latex-in-octopress/">Support LaTex in Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-26T16:29:48+08:00" pubdate data-updated="true">Apr 26<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>There are many posts introducing how to support Latex in Octopress, and how to display math formulars in web pages, bellow is what I have done.</p>
+  <entry>
+    <title type="html"><![CDATA[Support LaTex in Octopress]]></title>
+    <link href="http://KingWa.github.io/blog/2014/04/26/support-latex-in-octopress/"/>
+    <updated>2014-04-26T16:29:48+08:00</updated>
+    <id>http://KingWa.github.io/blog/2014/04/26/support-latex-in-octopress</id>
+    <content type="html"><![CDATA[<p>There are many posts introducing how to support Latex in Octopress, and how to display math formulars in web pages, bellow is what I have done.</p>
 
 <h2 id="mathjx">MathJX</h2>
 <p>Many websites use <a href="www.mathjax.org">MathJX</a> to display math symbols and formulars. MathJX is an open source JavaScript display engine for mathematics works in all browsers. Because it was writted in JavaScript, it does not require browser plugins to display math symbols, and it is indeed very attracted in developers and users’ eyes.</p>
@@ -331,7 +216,7 @@ That’s all. Let’s have some exmaples.</li>
 $$</code></pre>
 </div>
 
-<script type="math/tex; mode=display">% <![CDATA[
+<script type="math/tex; mode=display">% &lt;![CDATA[
 
 \begin{align*}
   & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
@@ -347,7 +232,7 @@ $$</code></pre>
        y_n
     \end{array} \right)
 \end{align*}
- %]]></script>
+ %]]&gt;</script>
 
 <ol>
   <li>Show an inline math:</li>
@@ -362,42 +247,15 @@ $$</code></pre>
 
 <p>And how about this: $$ x=y+z $$.</p>
 
-</div>
+]]></content>
+  </entry>
   
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/24/blog-equals-github-plus-octopress/">Blog=Github+Octopress</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-24T22:44:20+08:00" pubdate data-updated="true">Apr 24<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h2 id="why-i-write-blogs">Why I write blogs</h2>
+  <entry>
+    <title type="html"><![CDATA[Blog=Github+Octopress]]></title>
+    <link href="http://KingWa.github.io/blog/2014/04/24/blog-equals-github-plus-octopress/"/>
+    <updated>2014-04-24T22:44:20+08:00</updated>
+    <id>http://KingWa.github.io/blog/2014/04/24/blog-equals-github-plus-octopress</id>
+    <content type="html"><![CDATA[<h2 id="why-i-write-blogs">Why I write blogs</h2>
 <p>Actually, I am not a blog heavy writer. I use blog most as a tool to write down my thoughts, my experience and my notes.</p>
 
 <h2 id="why-i-choose-github-and-octopress">Why I choose Github and Octopress</h2>
@@ -542,116 +400,16 @@ caojinghua@debian:~/myworkstation/octopress$ git push origin source</code></pre>
   <li>Patience is needed.</li>
 </ol>
 
-</div>
+]]></content>
+  </entry>
   
+  <entry>
+    <title type="html"><![CDATA[Welcome]]></title>
+    <link href="http://KingWa.github.io/blog/2014/04/24/welcome/"/>
+    <updated>2014-04-24T14:00:40+08:00</updated>
+    <id>http://KingWa.github.io/blog/2014/04/24/welcome</id>
+    <content type="html"><![CDATA[<p>Welcome to my blog.</p>
+]]></content>
+  </entry>
   
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2014/04/24/welcome/">Welcome</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2014-04-24T14:00:40+08:00" pubdate data-updated="true">Apr 24<span>th</span>, 2014</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Welcome to my blog.</p>
-</div>
-  
-  
-
-
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
-</div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/blog/2014/04/29/share-code-snippets/">Share Code Snippets</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/26/support-latex-in-octopress/">Support LaTex in Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/24/blog-equals-github-plus-octopress/">Blog=Github+Octopress</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/04/24/welcome/">Welcome</a>
-      </li>
-    
-  </ul>
-</section>
-
-
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2014 - KingWah -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
-
-</footer>
-  
-
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
-
-
-
-
-
-</body>
-</html>
+</feed>

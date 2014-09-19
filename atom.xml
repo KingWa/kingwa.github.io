@@ -4,7 +4,7 @@
   <title><![CDATA[Hacking For Fun]]></title>
   <link href="http://KingWa.github.io/atom.xml" rel="self"/>
   <link href="http://KingWa.github.io/"/>
-  <updated>2014-09-15T17:52:30+08:00</updated>
+  <updated>2014-09-19T22:02:40+08:00</updated>
   <id>http://KingWa.github.io/</id>
   <author>
     <name><![CDATA[KingWah]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[TestPost]]></title>
-    <link href="http://KingWa.github.io/blog/2014/09/15/testpost/"/>
-    <updated>2014-09-15T17:26:31+08:00</updated>
-    <id>http://KingWa.github.io/blog/2014/09/15/testpost</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Share Code Snippets]]></title>
